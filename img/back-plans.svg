@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="510" height="407" viewBox="0 0 510 407">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #5451c1;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-2 {
+        filter: url(#filter-chain-1);
+      }
+    </style>
+
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5.196" result="dropBlur"/>
+      <feFlood flood-opacity="0.1"/>
+      <feComposite operator="in" in2="dropBlur" result="dropShadowComp"/>
+      <feComposite in="SourceGraphic" result="shadowed"/>
+    </filter>
+    <filter id="filter-chain-1" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.732" result="dropBlur"/>
+      <feFlood flood-opacity="0.22"/>
+      <feComposite operator="in" in2="dropBlur" result="dropShadowComp"/>
+      <feComposite in="SourceGraphic" result="shadowed"/>
+      <feFlood flood-color="#5451c1"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="shadowed" result="solidFill"/>
+    </filter>
+  </defs>
+  <g>
+    <path d="M61.122,218.556 C73.476,272.655 118.971,302.385 149.124,313.601 C185.694,327.203 208.225,316.376 243.959,325.063 C280.206,333.874 299.887,353.292 334.448,370.742 C388.067,397.811 433.172,404.372 447.728,398.405 C506.104,374.479 526.413,264.454 495.281,190.782 C437.328,53.642 186.164,8.499 96.604,99.472 C72.340,124.117 49.919,169.491 61.122,218.556 Z" class="cls-1"/>
+    <path d="M35.122,182.680 C47.476,236.780 92.971,266.510 123.124,277.727 C159.694,291.329 182.225,280.502 217.959,289.188 C254.206,297.998 273.887,317.418 308.448,334.866 C362.067,361.935 407.172,368.497 421.728,362.529 C480.104,338.604 500.413,228.579 469.281,154.907 C411.328,17.767 160.164,-27.375 70.604,63.596 C46.340,88.243 23.919,133.617 35.122,182.680 Z" class="cls-2"/>
+  </g>
+</svg>
